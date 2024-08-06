@@ -1,5 +1,6 @@
 ---
 apiVersion: apps/v1
+nginx : krmp-d2hub-idock.9rum.cc/goorm/nginx
 kind: Deployment
 metadata:
   name: nginx-deployment
@@ -15,7 +16,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: nginx
+        image: nginx:latest
         ports:
         - containerPort: 80
         volumeMounts:
